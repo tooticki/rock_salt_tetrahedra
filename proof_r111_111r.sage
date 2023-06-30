@@ -69,7 +69,7 @@ print("  d z_rs/dx < " + str(RIF(derivative(zz_eps,x).subs(xyz_eps)).upper()+0.0
 print("  d z_rs/dy < " + str(RIF(derivative(zz_eps,y).subs(xyz_eps)).upper()+0.01) + " < 0")
 
 print("  dd/dx < "+str(RIF(Dx_eps).upper()+.000001)+" < ax = -0.0006")
-print("  dd/dy < "+str(RIF(Dy_eps).upper()+.000001)+" < ay = -0.0007")
+print("  dd/dy < "+str(RIF(Dy_eps).upper()+.000001)+" < ay = -0.0006")
 print("  dd/dz > "+str(RIF(Dz_eps).lower()-.000001)+" > az = 0.6")
 
 xmin,ymin,zmin = 2,2,2
@@ -144,5 +144,5 @@ xmax,ymax,zmax = list(map(n, [1+3*r,1+3*r,2+2*r]))
 x0,y0,z0 = list(map(n, [x0,y0,z0]))
 
 
-draw(xmin,ymin,zmin,  xmax,ymax,zmax, x0,y0,z0, A,B,C, d, px, py).show() # the whole domain
-draw(x0,x0,z0-eps,  x0+eps,y0+eps,z0+eps, x0,y0,z0, A,B,C, d, px, py).show() # eps-neighborhood
+#draw(xmin,ymin,zmin,  xmax,ymax,zmax, x0,y0,z0, A,B,C, d, px, py).show() # the whole domain
+#draw(x0,x0,z0-eps,  x0+eps,y0+eps,z0+eps, x0,y0,z0, A,B,C, d, px, py).show() # eps-neighborhood
